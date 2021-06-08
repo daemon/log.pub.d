@@ -1,2 +1,2 @@
 # log.d
-Organized notes.
+Organized notes. Read with Typora.
