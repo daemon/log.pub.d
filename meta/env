@@ -1,1 +1,2 @@
-export PATH=$PATH:$(pwd)/meta
+export LOGD_HOME=$(git rev-parse --show-toplevel)
+export PATH=$PATH:$LOGD_HOME/meta

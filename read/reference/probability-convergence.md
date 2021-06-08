@@ -10,7 +10,7 @@ where F(x) is the CDF of X. We write
 $$
 X_n \to^\mathcal{\hspace{-4mm}D} X
 $$
-The continuous mapping theorem (i.e., for a sequence of RVs {Xn} converging to some RV X, continuous functions of Xn also converge to the same function of X) and Levy's continuity theorem (convergence in distribution iff characteristic functions converge pointwise) are useful.
+The continuous mapping theorem (i.e., for a sequence of RVs $\{X_n\}$ converging to some RV X, continuous functions of Xn also converge to the same function of X) and Levy's continuity theorem (convergence in distribution iff characteristic functions converge pointwise) are useful.
 
 **Convergence in probability**. The probability of Xn being outside of the ball of radius epsilon centered at X approaches zero for any epsilon, i.e.,
 $$
