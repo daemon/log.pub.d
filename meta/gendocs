@@ -3,7 +3,7 @@ echo "<!DOCTYPE html><html><body>" > docs/index.html
 
 for name in $(find . | grep md); do
 	pandoc --toc --standalone --mathjax -f markdown -t html $name -o docs/${name%%md}html;
-	echo "<a href=\"${name%%md}html\">$name</a>" >> docs/index.html;
+	echo "<a href=\"${name%%md}html\">$name</a><br>" >> docs/index.html;
 done
 
 echo "</body></html>" >> docs/index.html
