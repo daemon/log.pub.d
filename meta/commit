@@ -1,0 +1,2 @@
+MESSAGE=${1:-"Add notes"}
+git commit -m "$MESSAGE" -m "$(git add . && git diff --name-only HEAD)"
