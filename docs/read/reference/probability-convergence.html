@@ -159,22 +159,22 @@
 </nav>
 <h1 id="convergence-in-probability-theory">Convergence in Probability Theory</h1>
 <p>Convergence in probability theory deals with a sequence of RVs approaching an RV in the limit.</p>
-<p><strong>Convergence in distribution</strong>. Pointwise equality between the CDF of the nth r.v. in a sequence X1, …, Xn as n goes to infinity: <span class="math display">\[
+<p><strong>Convergence in distribution</strong>. Pointwise equality between the CDF of the nth r.v. in a sequence <span class="math inline">\(X_1, \dots, X_n\)</span> as <span class="math inline">\(n \to \infty\)</span>: <span class="math display">\[
 \lim_{n\to \infty} F_n(x) = F(x),
-\]</span> where F(x) is the CDF of X. We write <span class="math display">\[
+\]</span> where <span class="math inline">\(F(x)\)</span> is the CDF of <span class="math inline">\(X\)</span>. We write <span class="math display">\[
 X_n \to^\mathcal{\hspace{-4mm}D} X
-\]</span> The continuous mapping theorem (i.e., for a sequence of RVs <span class="math inline">\(\{X_n\}\)</span> converging to some RV X, continuous functions of Xn also converge to the same function of X) and Levy’s continuity theorem (convergence in distribution iff characteristic functions converge pointwise) are useful.</p>
+\]</span> The continuous mapping theorem (i.e., for a sequence of RVs <span class="math inline">\(\{X_n\}\)</span> converging to some RV <span class="math inline">\(X\)</span>, continuous functions of <span class="math inline">\(X_n\)</span> also converge to the same function of <span class="math inline">\(X\)</span>) and Levy’s continuity theorem (convergence in distribution iff characteristic functions converge pointwise) are useful.</p>
 <p><strong>Convergence in probability</strong>. The probability of Xn being outside of the ball of radius epsilon centered at X approaches zero for any epsilon, i.e., <span class="math display">\[
 \lim_{n\to \infty} \Pr(| X_n - X | &gt; \epsilon)= 0.
 \]</span> The continuous mapping theorem holds as well.</p>
 <p><strong>Almost sure convergence</strong>. The probability of Xn = X approaches one: <span class="math display">\[
-Pr(\lim_{n \to \infty} X_n = X) = 1.
+\Pr(\lim_{n \to \infty} X_n = X) = 1.
 \]</span> If we disregard sets of measure zero (i.e., which sure convergence covers), this is the strongest form of convergence. Practically, this form is the strongest: A.S. implies conv. in P implies conv. in D.</p>
 <h2 id="applications">Applications</h2>
 <ul>
 <li>A method to make a statement about a sequence of RVs is to transform them into their characteristic functions (projection onto Fourier basis), expand using Taylor’s theorem, drop off the unimportant terms, and then use Levy’s continuity theorem to show convergence in distribution (see proof of the classical CLT).</li>
 <li>CLT itself clearly useful for asymptotics for everything.</li>
-<li>Slutsky’s Thm. deals with additions and products of Xn and Yn converging in distn to cX, X + c, and X/c if Xn and Yn converge in probability to X and constant c, respectively.</li>
+<li>Slutsky’s Thm. deals with additions and products of <span class="math inline">\(X_n\)</span> and <span class="math inline">\(Y_n\)</span> converging in distn to <span class="math inline">\(cX\)</span>, <span class="math inline">\(X + c\)</span>, and <span class="math inline">\(X/c\)</span> if <span class="math inline">\(X_n\)</span> and <span class="math inline">\(Y_n\)</span> converge in probability to <span class="math inline">\(X\)</span> and constant <span class="math inline">\(c\)</span>, respectively.</li>
 </ul>
 </body>
 </html>
