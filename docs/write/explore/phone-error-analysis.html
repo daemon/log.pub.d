@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>phone-error-analysis</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#phonetic-error-analysis">Phonetic Error Analysis</a></li>
+</ul>
+</nav>
+<h1 id="phonetic-error-analysis">Phonetic Error Analysis</h1>
+<p>Let there be a sequence of audio-transcription tuples <span class="math inline">\((x_{i_n}, y_{i_n}), x_{i_n} \in \mathcal{X}, y_{i_n} \in \mathcal{Y}\)</span> indexed by <span class="math inline">\(i_n \in \mathcal{T} = \mathcal{T}_\text{training} \cup \mathcal{T}_\text{dev} \cup \mathcal{T}_\text{test}\)</span>, where <span class="math inline">\(y_i\)</span> is the orthographic string represented by the speech <span class="math inline">\(x_i\)</span>. Let a parametric classifier <span class="math inline">\(f(x; \theta)\)</span> produce a probability distribution over <span class="math inline">\(\mathcal{Y}\)</span> given audio <span class="math inline">\(x\)</span>. Let <span class="math inline">\(\phi(x_i, y_i)\)</span> return the phonetic transcription of the audio-transcription tuple; for the sake of simplicity, assume that <span class="math inline">\(\forall i, j \in \mathcal{T}.y_i \neq y_j \implies \phi(x_i, y_i) \neq \phi(x_j, y_j)\)</span>, which holds for limited speech recognition. Let <span class="math inline">\(\boldsymbol D&#39;\)</span> be the distance matrix induced by the edit distance string metric <span class="math inline">\(\delta(s_1, s_2)\)</span> among all distinct pairs of phonetic transcriptions <span class="math inline">\(\mathcal{Z}\)</span>, ordered lexicographically by the index set <span class="math inline">\(\mathcal{I}\)</span> along the rows and columns. Let <span class="math inline">\(\boldsymbol C\)</span> be the confusion matrix from evaluating a speech classification model on the test set, with the rows matching those of <span class="math inline">\(\boldsymbol D&#39;\)</span> and columns <span class="math inline">\(\mathcal{J}\)</span> being the index set of orthographic predictions <span class="math inline">\(\mathcal{Y}\)</span>, and <span class="math inline">\(\boldsymbol C_{ij}\)</span> is the number of times the model <em>erroneously</em> predicted the <span class="math inline">\(i^\text{th}\)</span> true phonetic transcription as the <span class="math inline">\(j^\text{th}\)</span> orthographic transcription.</p>
+<p><strong>Phonetic confusion correlation coefficient</strong> (PC3): the expected Pearson’s correlation coeff. between the phonetic edit distance and the number of confusions, with the confusions drawn from some distribution (e.g., the traffic): <span class="math display">\[
+\rho = \mathbb{E}[r(D_Z, \hat{S}_Z)|\hat{S}_Z \neq 0],
+\]</span> where <span class="math inline">\(Z\)</span> is the phonetic transcription, <span class="math inline">\(D_Z\)</span> is the phonetic edit distance between <span class="math inline">\(Z\)</span> and the model prediction, <span class="math inline">\(r\)</span> is the correlation function (Pearson’s), and <span class="math inline">\(\hat{S}_Z\)</span> is the number of erroneous confusions for <span class="math inline">\(Z\)</span>. Let <span class="math inline">\(\Phi(y)\)</span> produce the indices in <span class="math inline">\(\mathcal{I}\)</span> of the possible phonetic transcriptions for the string <span class="math inline">\(y\)</span>. Since the phonetic error <span class="math inline">\(\hat{S}_Z\)</span> of the model is unavailable (it outputs orthographic transcriptions), we take it as a latent variable that depends on <span class="math inline">\(f(x; \theta)\)</span>. For simplicity, we assume that this latent variable is the minimum possible phonetic distance between <span class="math inline">\(Z\)</span> and the set of candidates <span class="math inline">\(\Phi(f(x; \theta))\)</span>, i.e., the model has no intraclass phonetic bias, just interclass phonetic bias. Let <span class="math inline">\(\boldsymbol D_{ij}\)</span> be this minimum possible phonetic edit distance between <span class="math inline">\(z_i, i \in \mathcal{I}\)</span> and <span class="math inline">\(\Phi(y): z_i \in \Phi(y)\)</span>. Our estimator is hence computed as <span class="math display">\[
+\hat{\rho} = \sum_{i \in \mathcal{J}} w_i r_i,\hspace{5mm} w_i = \frac{\sum_{\boldsymbol C_{ij} \neq 0} \boldsymbol C_{ij}}{\sum_{\boldsymbol C_{kj}\neq0} \boldsymbol C_{kj}},\hspace{5mm} r_i = \frac{\sum_{\boldsymbol C_{ij} \neq 0}(\boldsymbol D_{ij} - \bar{\boldsymbol D_i}) (\boldsymbol C_{ij} - \bar{\boldsymbol C_i})}{\sqrt{\sum_{\boldsymbol C_{ij} \neq 0}(\boldsymbol D_{ij} - \bar{\boldsymbol D_i})^2}\sqrt{\sum_{\boldsymbol C_{ij} \neq 0}(\boldsymbol C_{ij} - \bar{\boldsymbol C_i})^2}}.
+\]</span> By construction, <span class="math inline">\(\hat{\rho} \in [-1, 1]\)</span>, with positive values indicating a preference to make more errors for dissimilar transcripts and negative values indicating more for similar transcripts. To compute confidence intervals, use bootstrapping for now, but we can likely derive from normality assumptions and/or exact confidence distributions. If sampling according to the traffic distribution doesn’t matter (i.e., uniform at random), this is as simple as using Fisher’s <span class="math inline">\(r\)</span>-to-<span class="math inline">\(z\)</span> transformation for each <span class="math inline">\(r\)</span>.</p>
+</body>
+</html>
