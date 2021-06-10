@@ -29,6 +29,9 @@
 </ul>
 </nav>
 <h1 id="basic-estimation-theory">Basic Estimation Theory</h1>
+<p>We say a parameter <span class="math inline">\(\theta\)</span> of a family of distributions <span class="math inline">\(\mathcal{P}\)</span> is estimable iff <span class="math display">\[
+\theta(P) = \mathbb{E}h(X_1, \dots, X_n), \hspace{3mm} X_1, \dots, X_n \sim^{\hspace{-3mm} \text{iid}} P
+\]</span> for all <span class="math inline">\(P \in \mathcal{P}\)</span>. The minimum <span class="math inline">\(n\)</span> for this to hold is the degree of <span class="math inline">\(\theta(P)\)</span>.</p>
 <h2 id="sufficient-statistics">Sufficient Statistics</h2>
 <p>A statistic <span class="math inline">\(T(X)\)</span> of a sample <span class="math inline">\(X = \{X_n\}\)</span> is said to be a sufficient statistic for <span class="math inline">\(\theta\)</span> that parameterizes the sample distn. <span class="math inline">\(f(x; \theta)\)</span> iff <span class="math inline">\(f(x; \theta)\)</span> is conditionally independent of <span class="math inline">\(\theta\)</span> given <span class="math inline">\(T(X)\)</span>. Intuitively, this definition means that knowing <span class="math inline">\(X\)</span> provides no additional information once <span class="math inline">\(T(X)\)</span> is known.</p>
 <p><strong>Factorization theorem</strong>: Given continuous or discrete <span class="math inline">\(f(x;\theta)\)</span> and sample <span class="math inline">\(X\)</span>, a stastistic <span class="math inline">\(T(X)\)</span> is sufficient iff <span class="math display">\[
