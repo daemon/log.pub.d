@@ -12,3 +12,4 @@ $$
 $$
 By construction, $\hat{\rho} \in [-1, 1]$, with positive values indicating a preference to make more errors for dissimilar transcripts and negative values indicating more for similar transcripts. To compute confidence intervals, use bootstrapping for now, but we can likely derive from normality assumptions and/or exact confidence distributions. If sampling according to the traffic distribution doesn't matter (i.e., uniform at random), this is as simple as using Fisher's $r$-to-$z$ transformation for each $r$.
 
+****
