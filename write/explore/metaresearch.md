@@ -1,5 +1,7 @@
 # Meta-research Notes
 
+Personal notes with feedback from Jimmy Lin and his research group. See [his guide](https://github.com/lintool/guide) if you haven't already.
+
 ## Writing Style
 
 1. **Justify every claim and choice by argument**, which takes on one (or more) of the following types, in decreasing order of strength:
@@ -15,8 +17,7 @@
    - Bad: "Let there be a parametric, differentiable classifier $f(x; \theta)$ parameterized by (a possibly infinite number of parameters) $\theta$ over the set of reals. Let there be a generative model $g(x; \phi)$ for the nondegenerate data probability distribution $p(x)$ where ..."
    - Good: "Consider the specific text classification task, with a classification model $f(x)$ and a language model $g(x)$."
 5. **Lighten the cognitive load** of the reader as much as possible. A good paper uses the least number of neurons as possible to defend itself.
-6. **Move the related work section to the end.** Placed in the beginning, the related work section is too incomprehensible for the reader, who knows nothing of your problem.
-7. **Fold the background part into the methods section, where possible.** The methodology section should always have justification regardless.
+6. **Use the background and related work section to frame the problem and your solution.** The introduction describes the problem, and the methods section solves it. To bridge the two, the background and related work part explains why it's hard and the shortcomings of previous work.
 
 ## Experimental Style
 
