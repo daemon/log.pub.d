@@ -5,25 +5,22 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>basic-estimation-theory</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
   <link rel="stylesheet" href="/log.d/pandoc.css" />
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
-<nav id="TOC" role="doc-toc">
+<nav id="TOC">
 <ul>
-<li><a href="#basic-estimation-theory">Basic Estimation Theory</a>
-<ul>
+<li><a href="#basic-estimation-theory">Basic Estimation Theory</a><ul>
 <li><a href="#sufficient-statistics">Sufficient Statistics</a></li>
 </ul></li>
 </ul>
@@ -33,10 +30,10 @@
 \theta(P) = \mathbb{E}h(X_1, \dots, X_n), \hspace{3mm} X_1, \dots, X_n \sim^{\hspace{-3mm} \text{iid}} P
 \]</span> for all <span class="math inline">\(P \in \mathcal{P}\)</span>. The minimum <span class="math inline">\(n\)</span> for this to hold is the degree of <span class="math inline">\(\theta(P)\)</span>.</p>
 <h2 id="sufficient-statistics">Sufficient Statistics</h2>
-<p>A statistic <span class="math inline">\(T(X)\)</span> of a sample <span class="math inline">\(X = \{X_n\}\)</span> is said to be a sufficient statistic for <span class="math inline">\(\theta\)</span> that parameterizes the sample distn. <span class="math inline">\(f(x; \theta)\)</span> iff <span class="math inline">\(f(x; \theta)\)</span> is conditionally independent of <span class="math inline">\(\theta\)</span> given <span class="math inline">\(T(X)\)</span>. Intuitively, this definition means that knowing <span class="math inline">\(X\)</span> provides no additional information once <span class="math inline">\(T(X)\)</span> is known.</p>
-<p><strong>Factorization Theorem</strong>: Given continuous or discrete <span class="math inline">\(f(x;\theta)\)</span> and sample <span class="math inline">\(X\)</span>, a stastistic <span class="math inline">\(T(X)\)</span> is sufficient iff <span class="math display">\[
-f(x;\theta) = g(X)h(\theta, T(X))
-\]</span> for some <span class="math inline">\(g(X)\)</span> and <span class="math inline">\(h(\theta, T(X))\)</span> nonnegative (<em>Ex</em> 1: prove for the discrete case).</p>
-<p><strong>Rao-Blackwell Theorem</strong>: Let there be two estimators of the form <span class="math inline">\(\hat{\theta}_1=f(X)\)</span> and <span class="math inline">\(\hat{\theta}_2 = g(T(X))\)</span>, where <span class="math inline">\(T(X)\)</span> is a sufficient statistic of <span class="math inline">\(\theta\)</span> given sample <span class="math inline">\(X=\{X_n\}\)</span>. Then <span class="math inline">\(\text{MSE}(\hat{\theta}_1) \geq \text{MSE}(\hat{\theta}_2)\)</span>, with unbiasedness being preserved (<em>Ex</em> 2: prove).</p>
+<p>A statistic <span class="math inline">\(T(x)\)</span> of a sample <span class="math inline">\(X = \{X_n\}\)</span> is said to be a sufficient statistic for <span class="math inline">\(\theta\)</span> that parameterizes the pdf <span class="math inline">\(f(x; \theta)\)</span> iff <span class="math inline">\(f(x; \theta)\)</span> is conditionally independent of <span class="math inline">\(\theta\)</span> given <span class="math inline">\(T(x)\)</span>, i.e., <span class="math inline">\(f(x | t; \theta) = g(x)\)</span>. Intuitively, this definition means that knowing <span class="math inline">\(X\)</span> provides no additional information about <span class="math inline">\(\theta\)</span> once <span class="math inline">\(T(x)\)</span> is known.</p>
+<p><strong>Factorization Theorem</strong>: Given continuous or discrete <span class="math inline">\(f(x;\theta)\)</span> and sample <span class="math inline">\(X\)</span>, a statistic <span class="math inline">\(T(X)\)</span> is sufficient iff <span class="math display">\[
+f(x;\theta) = g(x)h(\theta, T(x))
+\]</span> for some <span class="math inline">\(g(x)\)</span> and <span class="math inline">\(h(\theta, T(x))\)</span> nonnegative (<em>Ex</em> 1: prove for the discrete case; soln: <span class="math inline">\(f(x; \theta) = f(x, t; \theta)\)</span> and chain rule).</p>
+<p><strong>Rao-Blackwell Theorem</strong>: Let there be two estimators of the form <span class="math inline">\(\hat{\theta}_1=f(X)\)</span> and <span class="math inline">\(\hat{\theta}_2 = \mathbb{E}[\hat{\theta}_1|T]\)</span>, where <span class="math inline">\(T(X)\)</span> is a sufficient statistic of <span class="math inline">\(\theta\)</span> given sample <span class="math inline">\(X=\{X_n\}\)</span>. Then <span class="math inline">\(\text{MSE}(\hat{\theta}_2) \leq \text{MSE}(\hat{\theta}_1)\)</span>, with unbiasedness being preserved (<em>Ex</em> 2: prove; soln: start with the left side, condition on <span class="math inline">\(T\)</span>, then use Jensen’s Inequality).</p>
 </body>
 </html>
