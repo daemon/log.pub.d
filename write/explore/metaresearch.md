@@ -13,7 +13,7 @@ Personal notes with feedback from Jimmy Lin and his research group. See [his gui
    6. Personal anecdote (e.g., our preliminary runs show this but no data given).
 2. **Use plain syntax.** Readers are here to admire the problem and the solutions, not the prose.
 3. **Use fun semantics.** Make the problem and the solutions interesting.
-4. **Give simple yet intriguing specific examples.** Defer the general case for later (or place in the appendix if advisable). Readers' attention fall off quickly, and it's important to capture that for as long as possible. A specific case of your problem allows them to immediately taste what you're trying to solve, without the complexities of the general case. For example,
+4. **Give simple yet intriguing specific examples.** Defer the general case for later (or place in the appendix if advisable). Readers' attention falls off quickly, and it's important to capture that for as long as possible. A specific case of your problem allows them to immediately taste what you're trying to solve, without the complexities of the general case. For example,
    - Bad: "Let there be a parametric, differentiable classifier $f(x; \theta)$ parameterized by (a possibly infinite number of parameters) $\theta$ over the set of reals. Let there be a generative model $g(x; \phi)$ for the nondegenerate data probability distribution $p(x)$ where ..."
    - Good: "Consider the specific text classification task, with a classification model $f(x)$ and a language model $g(x)$."
 5. **Lighten the cognitive load** of the reader as much as possible. A good paper uses the least number of neurons as possible to defend itself.
