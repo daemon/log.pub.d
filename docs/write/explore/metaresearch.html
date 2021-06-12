@@ -5,21 +5,25 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>metaresearch</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="/log.d/pandoc.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
-<nav id="TOC">
+<nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#meta-research-notes">Meta-research Notes</a><ul>
+<li><a href="#meta-research-notes">Meta-research Notes</a>
+<ul>
 <li><a href="#writing-style">Writing Style</a></li>
 <li><a href="#experimental-style">Experimental Style</a></li>
 </ul></li>
@@ -39,6 +43,12 @@
 </ol></li>
 <li><strong>Use plain syntax.</strong> Readers are here to admire the problem and the solutions, not the prose.</li>
 <li><strong>Use fun semantics.</strong> Make the problem and the solutions interesting.</li>
+<li><strong>Use simple yet intriguing specific examples.</strong> Defer the general case for later (or place in the appendix if advisable). Readers’ attention fall off quickly, and it’s important to capture that for as long as possible. A specific case of your problem allows them to immediately taste what you’re trying to solve, without the complexities of the general case. For example,
+<ul>
+<li>Bad: “Let there be a parametric, differentiable classifier <span class="math inline">\(f(x; \theta)\)</span> parameterized by (a possibly infinite number of parameters) <span class="math inline">\(\theta\)</span> over the set of reals. Let there be a generative model <span class="math inline">\(g(x; \phi)\)</span> for the nondegenerate data probability distribution <span class="math inline">\(p(x)\)</span> where …”</li>
+<li>Good: “Consider the specific text classification task, with a classification model <span class="math inline">\(f(x)\)</span> and a language model <span class="math inline">\(g(x)\)</span>.”</li>
+</ul></li>
+<li><strong>Lighten the cognitive load</strong> of the reader as much as possible. A good paper uses the least number of neurons as possible to defend itself.</li>
 <li><strong>Move the related work section to the end.</strong> Placed in the beginning, the related work section is too incomprehensible for the reader, who knows nothing of your problem.</li>
 <li><strong>Fold the background part into the methods section, where possible.</strong> The methodology section should always have justification regardless.</li>
 </ol>
@@ -57,8 +67,8 @@
 <li>Would baselines outperform my approach? Do baselines before novel methods.</li>
 <li>Is this task beyond my current resources? Do planning before execution.</li>
 </ol></li>
-<li><strong>Abandon boring projects.</strong> If this project no longer excites you, you definitely won’t excite the reader, who might not be excited <em>even when</em> you are excited. Further, you won’t care if it gets published, and academia isn’t for prestige or wealth.</li>
-<li><strong>Avoid security through obscurity.</strong> If your design has a potential flaw, you must either explicitly justify it or change it. It’s not only unethical but also pathetic to mislead yourself and others.</li>
+<li><strong>Be flexible.</strong> If a story isn’t working, modify it to be better. If a project no longer excites you, you definitely won’t excite the reader, who might not be excited <em>even when</em> you are excited. Further, you won’t care if it gets published, and academia isn’t for prestige or wealth.</li>
+<li><strong>Avoid security through obscurity.</strong> If your design has a potential flaw, you must either explicitly justify it or change it. It’s unethical and wasteful to mislead yourself and others.</li>
 </ol>
 </body>
 </html>
