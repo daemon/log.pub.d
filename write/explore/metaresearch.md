@@ -1,6 +1,6 @@
 # Meta-research Notes
 
-Personal notes with feedback from Jimmy Lin and his research group. See [his guide](https://github.com/lintool/guide) if you haven't already.
+Personal notes with ideas and feedback from Jimmy Lin and his research group. See [his guide](https://github.com/lintool/guide) if you haven't already.
 
 ## Writing Style
 
