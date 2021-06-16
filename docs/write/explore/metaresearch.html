@@ -30,13 +30,13 @@
 </ul>
 </nav>
 <h1 id="meta-research-notes">Meta-research Notes</h1>
-<p>Personal notes with ideas and feedback from Jimmy Lin and his research group. See <a href="https://github.com/lintool/guide">his guide</a> if you haven’t already.</p>
+<p>My research follows these rules, with ideas and feedback from Jimmy Lin and his research group. As usual, feedback does not imply endorsement. Be sure to read <a href="https://github.com/lintool/guide">his guide</a> if you haven’t already.</p>
 <h2 id="writing-style">Writing Style</h2>
 <ol type="1">
 <li><strong>Justify every claim and choice by argument</strong>, which takes on one (or more) of the following types, in decreasing order of strength:
 <ol type="1">
 <li>Deduction from first principles (e.g., mathematical proof).</li>
-<li>Abductive reasoning (e.g., strong experimental evidence).</li>
+<li>Inductive and abductive reasoning (e.g., strong experimental evidence).</li>
 <li>Literature (e.g., following X et al.).</li>
 <li>Bandwagoning (e.g., everybody uses this model).</li>
 <li>Authority (e.g., Google did it).</li>
@@ -54,22 +54,36 @@
 </ol>
 <h2 id="experimental-style">Experimental Style</h2>
 <ol type="1">
-<li><strong>Pick a problem that satisfies the following properties:</strong>
+<li><p><strong>Pick a problem that satisfies the following properties:</strong></p>
 <ol type="1">
-<li><strong>Important</strong>: work on something that matters to many; <a href="https://www.goodreads.com/en/book/show/15731248-the-ph-d-grind">research isn’t done in a vacuum</a>. Always consider the implications of your claims and findings.</li>
+<li><strong>Impactful</strong>: work on something that matters to many; <a href="https://www.goodreads.com/en/book/show/15731248-the-ph-d-grind">research isn’t done in a vacuum</a>. Always consider the implications of your claims and findings.</li>
 <li><strong>Interesting</strong>: work on something that matters to you. If you don’t care about the success of a project, you won’t realize your potential.</li>
 <li><strong>Realistic</strong>: <a href="https://terrytao.wordpress.com/career-advice/continually-aim-just-beyond-your-current-range/">work on something just outside your reach</a>. That way, you continually grow your realm of competence.</li>
 <li><strong>Capturable</strong>: work on something whose solution’s value you can capture better than others. <a href="https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296">It’s about the size of the bite, not the size of the cake</a>.</li>
 </ol></li>
-<li><strong>Identify critical points early.</strong> Which potential finding, if discovered, would result in a waste of time and effort? For example,
+<li><p><strong>Pick a hypothesis that satisfies the following properties:</strong></p>
 <ol type="1">
-<li>Is my task interesting and my approach new? Do literature search before novel design.</li>
+<li><strong>Falsifiable</strong>: a hypothesis is <em>not</em> a mere statement of fact. It is a claim that you need to support with the aforementioned argument types.</li>
+<li><strong>Impactful and interesting</strong>: see the first point.</li>
+<li><strong>Concrete</strong>: the wording of the hypothesis must be precise. It must leave no room for misinterpretation, as it’s the centerpiece of the paper.</li>
+<li><strong>Explainable</strong>: ideally, the hypothesis has an explanatory clause following it, which provides critical understanding and insight.</li>
+</ol>
+<p>Here are some examples:</p>
+<ul>
+<li>Terrible: “BERT is sometimes prunable and other times not.” (unfalsifiable, vague, and unimpactful)</li>
+<li>Bad: “BERT achieves a compression ratio of 10.5 on the SST-2 dataset.” (unfalsifiable)</li>
+<li>Okay: “BERT achieves a higher pruning compression ratio on tasks with shorter sentences than it was pretrained on.”</li>
+<li>Good: “Pretrained transformers achieve higher compression ratios on tasks with shorter sentences than they were pretrained on, because the class token attends to fewer tokens, reducing the parameter need.”</li>
+</ul></li>
+<li><p><strong>Identify critical points early.</strong> Which potential finding, if discovered, would result in a waste of time and effort? For example,</p>
+<ol type="1">
+<li>Is my task important and my approach new? Do literature search before novel design.</li>
 <li>Would baselines outperform my approach? Do baselines before novel methods.</li>
 <li>Is this task beyond my current resources? Do planning before execution.</li>
 </ol></li>
-<li><strong>Be flexible.</strong> If a story isn’t working, improve it. If a project no longer excites you, end it. You definitely won’t excite the reader, who might not be excited <em>even when</em> you are excited. Further, you won’t care if it gets published, and academia isn’t driven by prestige or wealth. Those are byproducts of solving interesting problems.</li>
-<li><strong>Avoid security through obscurity.</strong> If your design has a potential flaw, you must either explicitly justify it or change it. It’s unethical and wasteful to mislead yourself and others.</li>
-<li><strong>Get feedback early and often.</strong> Talk to your supervisor, peers, and students. Again, <a href="https://www.goodreads.com/en/book/show/15731248-the-ph-d-grind">research isn’t done in a vacuum</a>, and <a href="https://hbr.org/2017/03/teams-solve-problems-faster-when-theyre-more-cognitively-diverse">diversity matters</a>.</li>
+<li><p><strong>Be flexible.</strong> If a story isn’t working, improve it. If a project no longer excites you, end it. You definitely won’t excite the reader, who might not be excited <em>even when</em> you are excited. Further, you won’t care if it gets published, and academia isn’t driven by prestige or wealth. Those are byproducts of solving interesting problems.</p></li>
+<li><p><strong>Avoid security through obscurity.</strong> If your design has a potential flaw, you must either explicitly justify it or change it. It’s unethical and wasteful to mislead yourself and others.</p></li>
+<li><p><strong>Get feedback early and often.</strong> Talk to your supervisor. Talk to your friends. Talk to your mother and her cat. Again, <a href="https://www.goodreads.com/en/book/show/15731248-the-ph-d-grind">research isn’t done in a vacuum</a>, and <a href="https://hbr.org/2017/03/teams-solve-problems-faster-when-theyre-more-cognitively-diverse">diversity matters</a>.</p></li>
 </ol>
 </body>
 </html>
