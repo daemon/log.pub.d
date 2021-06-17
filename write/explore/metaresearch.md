@@ -30,9 +30,8 @@ My research follows these rules, with ideas and feedback from Jimmy Lin and his 
 2. **Pick a hypothesis that satisfies the following properties:**
 
    1. **Falsifiable**: a hypothesis is _not_ a mere statement of fact. It is a claim that you need to support with the aforementioned argument types.
-   2. **Impactful and interesting**: see the first point.
-   3. **Concrete**: the wording of the hypothesis must be precise. It must leave no room for misinterpretation, as it's the centerpiece of the paper.
-   4. **Explainable**: ideally, the hypothesis has an explanatory clause following it, which provides critical understanding and insight.
+   2. **Concrete**: the wording of the hypothesis must be precise. It must leave no room for misinterpretation, as it's the centerpiece of the paper.
+   3. **Explainable**: ideally, the hypothesis has an explanatory clause following it, which provides critical understanding and insight.
 
    Here are some examples:
 
