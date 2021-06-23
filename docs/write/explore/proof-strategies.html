@@ -5,11 +5,13 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>proof-strategies</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="/log.d/pandoc.css" />
   <!--[if lt IE 9]>
@@ -17,9 +19,10 @@
   <![endif]-->
 </head>
 <body>
-<nav id="TOC">
+<nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#proof-strategies">Proof Strategies</a><ul>
+<li><a href="#proof-strategies">Proof Strategies</a>
+<ul>
 <li><a href="#general">General</a></li>
 </ul></li>
 </ul>
@@ -27,7 +30,10 @@
 <h1 id="proof-strategies">Proof Strategies</h1>
 <h2 id="general">General</h2>
 <ul>
-<li>Construct an expression that’s similar to (or part of) something in the premise, then directly relate it to another.</li>
+<li>Construct an expression that’s similar to (or part of) something in the premise, then directly relate it to another.
+<ul>
+<li>It’s often more helpful to use the premise at a later point in the proof, especially if it’s a constructive one. For example, you let there be an object, and then at some point you can use the premise to say something about the object.</li>
+</ul></li>
 <li>A good proof by contradiction can’t be easily transformed into a direct proof. It uses the contradiction to derive an alternate reality with extra information, which eventually proves to be incorrect.</li>
 <li>Don’t blindly expand the syntax of an expression; instead, focus on its semantics.
 <ul>
