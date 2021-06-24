@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>randomized-algos</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="/log.d/pandoc.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#randomized-algorithms">Randomized Algorithms</a>
+<ul>
+<li><a href="#useful-inequalities">Useful Inequalities</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="randomized-algorithms">Randomized Algorithms</h1>
+<h2 id="useful-inequalities">Useful Inequalities</h2>
+<ul>
+<li><span class="math inline">\(\left(\frac{n}{k}\right)^k \leq \binom{n}{k} \leq \left(\frac{en}{k}\right)^k\)</span> for <span class="math inline">\(k \geq 0\)</span>.</li>
+<li>Pascal’s Identity: <span class="math inline">\(\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}\)</span></li>
+<li>Hockey Stick Identity: <span class="math inline">\(\sum_{i=r}^{n} \binom{i}{r} = \binom{n+1}{r+1}\)</span>.</li>
+<li><span class="math inline">\(1-x \leq e^{-x}\)</span>, or anything involving exponents.</li>
+<li>Boole’s Inequality: <span class="math inline">\(\Pr(\bigcup_{i=1}^n E_i) \leq \sum_{i=1}^n \Pr(E_i)\)</span>. Natural consequence of <span class="math inline">\(\sigma\)</span>-additivity.</li>
+<li>Jensen’s Inequality: <span class="math inline">\(\phi(\mathbb{E}X) \leq \mathbb{E} \phi(X)\)</span> for convex <span class="math inline">\(\phi\)</span>, with strict inequality for strictly convex <span class="math inline">\(\phi\)</span> and nondegenerate <span class="math inline">\(F_X(x)\)</span>.</li>
+<li>Markov’s Inequality: <span class="math inline">\(\Pr(Y \geq t) \leq \frac{\mathbb{E}Y}{t}\)</span> for <span class="math inline">\(Y, t\)</span> non-negative. Prove by defining dummy variable <span class="math inline">\(f(y) = 1\)</span> if <span class="math inline">\(y \geq t\)</span>, <span class="math inline">\(0\)</span> otherwise, then taking expectation over that.
+<ul>
+<li>Only really useful for deriving other inequalities. Sharpest bound possible given only non-negativity.</li>
+</ul></li>
+<li>Chebyshev’s Inequality: <span class="math inline">\(\Pr(|X - \mu| \geq t\sigma) \leq \frac{1}{t^2}\)</span>. Prove by considering the square of both sides in the probability.</li>
+</ul>
+</body>
+</html>
