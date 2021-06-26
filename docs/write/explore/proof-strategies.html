@@ -14,6 +14,7 @@
     ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="/log.d/pandoc.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -24,6 +25,8 @@
 <li><a href="#proof-strategies">Proof Strategies</a>
 <ul>
 <li><a href="#general">General</a></li>
+<li><a href="#real-analysis">Real Analysis</a></li>
+<li><a href="#statistics-and-probability">Statistics and Probability</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -42,6 +45,21 @@
 <li>Textbook proofs are often too condensed to be informative. Instead, derive the proof yourself.</li>
 <li>Start with the belief that the claim is incorrect, then convince yourself that it’s correct.</li>
 <li>Try iteratively refining a proof sketch until it’s a rigorous proof, like animation storyboarding. This helps in particular when you’re stuck, e.g., going from A to C may be easier than A to B to C, especially if B and C are unknown.</li>
+</ul>
+<h2 id="real-analysis">Real Analysis</h2>
+<ul>
+<li>Knowing every single definition and theorem is important, since the concepts are densely connected.</li>
+</ul>
+<h2 id="statistics-and-probability">Statistics and Probability</h2>
+<ul>
+<li>It’s clean and helpful to manipulate the expressions coarsely rather than finely, e.g., working directly with the equalities within <span class="math inline">\(Pr(\cdot \leq \cdot)\)</span>.
+<ul>
+<li>Also proving some V-statistics estimators are biased relative to U-statistics.</li>
+</ul></li>
+<li>Equivalent forms of distributions (and theorems linking them to some definitions) are often more useful (and simple) toward proving some properties like convergence in distribution.
+<ul>
+<li>E.g., Levy’s continuity Thm., MGF convergence.</li>
+</ul></li>
 </ul>
 </body>
 </html>

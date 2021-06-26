@@ -10,3 +10,14 @@
 - Textbook proofs are often too condensed to be informative. Instead, derive the proof yourself.
 - Start with the belief that the claim is incorrect, then convince yourself that it's correct.
 - Try iteratively refining a proof sketch until it's a rigorous proof, like animation storyboarding. This helps in particular when you're stuck, e.g., going from A to C may be easier than A to B to C, especially if B and C are unknown.
+
+## Real Analysis
+
+- Knowing every single definition and theorem is important, since the concepts are densely connected.
+
+## Statistics and Probability
+
+- It's clean and helpful to manipulate the expressions coarsely rather than finely, e.g., working directly with the equalities within $Pr(\cdot \leq \cdot)$. 
+  - Also proving some V-statistics estimators are biased relative to U-statistics.
+- Equivalent forms of distributions (and theorems linking them to some definitions) are often more useful (and simple) toward proving some properties like convergence in distribution.
+  - E.g., Levy's continuity Thm., MGF convergence.
