@@ -21,3 +21,5 @@
   - Also proving some V-statistics estimators are biased relative to U-statistics.
 - Equivalent forms of distributions (and theorems linking them to some definitions) are often more useful (and simple) toward proving some properties like convergence in distribution.
   - E.g., Levy's continuity Thm., MGF convergence.
+
+- A simple method to generalize proofs is to show some result on the real line and then use isometry to Borel sets.
