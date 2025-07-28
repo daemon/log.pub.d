@@ -10,6 +10,11 @@
 - Textbook proofs are often too condensed to be informative. Instead, derive the proof yourself.
 - Start with the belief that the claim is incorrect, then convince yourself that it's correct.
 - Try iteratively refining a proof sketch until it's a rigorous proof, like animation storyboarding. This helps in particular when you're stuck, e.g., going from A to C may be easier than A to B to C, especially if B and C are unknown.
+- Thoroughly understand all objects, definitions, theorems, etc., associated with a statement, even if they seem trivial
+  - This helps you avoid silly errors and adding too many unnecessary conditions
+  - It may also result in a more terse proof
+- In general, it is good to learn by counterfactual thinking, always questioning the "what" and "why" of definitions and theorems.
+  - Other techniques include spaced repetition (performing recall/reviews right before you forget it, such as first every day, then every two days, then every week, and so on), metacognition (thinking about thought process and where to improve), actually working on proofs, and self-explanation (try to explain each step instead of just reading through a proof)
 
 ## Real Analysis
 
