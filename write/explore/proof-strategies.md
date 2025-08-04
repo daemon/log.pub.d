@@ -37,3 +37,5 @@ is to show that $\mathbb{P}(\text{some event infinity often}) = 0$ a.s., e.g.,
 $$\mathbb{P}(|X_n - X | < \epsilon)$$ a.s. for all $\epsilon > 0$$.
 
 Here, letting $A_n$ be $|X_n - X | > \epsilon$ be the event and showing that it $= 0$, if we can prove $\sum_{i=1}^\infty \mathbb{P}(A_n) < \infty$, e.g., if the term is something greater than $\frac{1}{n}$ so it's not harmonics (e.g., the infinite series is not divergent).
+
+- P-W-Z way of using integration by parts to define a stochastic integral is interesting and easy to digest
