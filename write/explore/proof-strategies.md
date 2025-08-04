@@ -28,3 +28,12 @@
   - E.g., Levy's continuity Thm., MGF convergence.
 
 - A simple method to generalize proofs is to show some result on the real line and then use isometry to Borel sets.
+- One useful application of the Borel-Cantelli theorem, i.e.,
+
+$$\sum_{i=1}^\infty \mathbb{P}(A_i) < \infty \implies \mathbb{P}\left(\bigcap_{m=1}^\infty \bigcup_{i=m}^\infty A_i\right) = 0$$
+
+is to show that $\mathbb{P}(\text{some event infinity often}) = 0$ a.s., e.g.,
+
+$$\mathbb{P}(|X_n - X | < \epsilon)$$ a.s. for all $\epsilon > 0$$.
+
+Here, letting $A_n$ be $|X_n - X | > \epsilon$ be the event and showing that it $= 0$, if we can prove $\sum_{i=1}^\infty \mathbb{P}(A_n) < \infty$, e.g., if the term is something greater than $\frac{1}{n}$ so it's not harmonics (e.g., the infinite series is not divergent).
