@@ -30,7 +30,7 @@
 - A simple method to generalize proofs is to show some result on the real line and then use isometry to Borel sets.
 - One useful application of the Borel-Cantelli theorem, i.e.,
 
-$$\sum_{i=1}^\infty \mathbb{P}(A_i) < \infty \implies \mathbb{P}\left(\cap_{m=1}^\infty \cup_{i=m}^\infty A_i\right) = 0$$
+$$\sum_{i=1}^\infty \mathbb{P}(A_i) < \infty \implies \mathbb{P}\left(\bigcap_{m=1}^\infty \bigcup_{i=m}^\infty A_i\right) = 0$$
 
 is to show that $\mathbb{P}(\text{some event infinity often}) = 0$ a.s., e.g.,
 
