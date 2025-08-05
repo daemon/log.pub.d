@@ -15,6 +15,7 @@
   - It may also result in a more terse proof
 - In general, it is good to learn by counterfactual thinking, always questioning the "what" and "why" of definitions and theorems.
   - Other techniques include spaced repetition (performing recall/reviews right before you forget it, such as first every day, then every two days, then every week, and so on), metacognition (thinking about thought process and where to improve), actually working on proofs, and self-explanation (try to explain each step instead of just reading through a proof)
+- Proving that a set has some property is sometimes easier if we construct another set with said quality and prove that the set is a subset of that other set (e.g., the Monotone Class Theorem)
 
 ## Real Analysis
 
