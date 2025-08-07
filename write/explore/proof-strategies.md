@@ -38,5 +38,8 @@ is to show that $\mathbb{P}(\text{some event infinity often}) = 0$ a.s., e.g.,
 $\mathbb{P}(|X_n - X | < \epsilon)$ a.s. for all $\epsilon > 0$.
 
 Here, letting $A_n$ be $|X_n - X | > \epsilon$ be the event and showing that it $= 0$, if we can prove $\sum_{i=1}^\infty \mathbb{P}(A_n) < \infty$, e.g., if the term is something greater than $\frac{1}{n}$ so it's not harmonics (e.g., the infinite series is not divergent).
+- It might help to construct a set with some property (e.g., $L = \\{ A  \in \mathcal{F} : \mu(A) = \lambda(A) \\}$ then prove facts about that set to further generalize it (e.g., showing that it's monotone then using the Monotone Class Theorem); see below
+<img width="1675" height="721" alt="image" src="https://github.com/user-attachments/assets/5aaf03ed-15ae-4a0a-af84-3c4ae54a2c1f" />
+
 
 - P-W-Z way of using integration by parts to define a stochastic integral is interesting and easy to digest
