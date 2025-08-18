@@ -16,6 +16,8 @@
 - In general, it is good to learn by counterfactual thinking, always questioning the "what" and "why" of definitions and theorems.
   - Other techniques include spaced repetition (performing recall/reviews right before you forget it, such as first every day, then every two days, then every week, and so on), metacognition (thinking about thought process and where to improve), actually working on proofs, and self-explanation (try to explain each step instead of just reading through a proof)
 - Proving that a set has some property is sometimes easier if we construct another set with said quality and prove that the set is a subset of that other set (e.g., the Monotone Class Theorem)
+- Stop relying purely on intuition for the final result if you lack experience, since it may rabbithole you into an incorrect solution. Instead, be open-minded and construct things from the ground up.
+  - Intuition is still powerful and useful for few-step lookahead if experience is lacking.
 
 ## Real Analysis
 
